@@ -48,18 +48,15 @@
             color: black;
         }
 
-        /* Tab content styles */
         .tab-content {
             display: none;
             padding: 20px;
         }
 
-        /* Active tab content */
         .active {
             display: block;
         }
 
-        /* Dropdown button style */
         .dropdown-btn {
             color: white;
             padding: 10px;
@@ -76,13 +73,11 @@
             background-color: #45a049;
         }
 
-        /* Dropdown content style */
         .dropdown-container {
             display: none;
             padding-left: 20px;
         }
 
-        /* Image styling */
         img {
             max-width: 100%;
             height: auto;
@@ -92,7 +87,6 @@
             margin-bottom: 20px;
         }
 
-        /* Section style */
         .section h3 {
             margin-top: 0;
         }
@@ -104,14 +98,12 @@
     <h4>And how can linguistic distance reflect and complicate how we think about colonial influence?</p>
 </div>
     
-<!-- Navbar -->
 <div class="navbar">
     <a href="javascript:void(0)" onclick="openTab('tab1')">Creolization Across Languages</a>
     <a href="javascript:void(0)" onclick="openTab('tab2')">Perplexity-Based Linguistic Distance</a>
     <a href="javascript:void(0)" onclick="openTab('tab3')">Insights, Limitations, and Sources</a>
 </div>
 
-<!-- Tab 1 Content -->
 <div id="tab1" class="tab-content">
     <h2>How "far" are Creole languages from English?</h2>
     <h3>"Distance" is measured by perplexity using English gpt2.</h3>
@@ -190,11 +182,12 @@
     </div>
 </div>
 
-<!-- Tab 2 Content (Blank) -->
 <div id="tab2" class="tab-content">
     <h2>Perplexity-Based Linguistic Distance</h2>
     <h3>What is linguistic distance?</h3>
     <h4>Linguistic distance is a measure of how different two languages are. There are many proposed measures of linguistic difference, such as <a href="https://docs.iza.org/dp1246.pdf">ease of second language learning</a>, or <a href="https://www.sciencedirect.com/science/article/pii/S0378437110003997?casa_token=uaeFGK7AsDgAAAAA:rm3AElO5G4Ik1zRGkCHMIXnXAscKJIs33wCo_Q1Eevn5owFD2P7XscPqGZHwyaXYyyuVhRlb8HI">comparing synonyms.</a></h4>
+    <h3>What is perplexity?</h3>
+    <h4><a href="https://blog.uptrain.ai/decoding-perplexity-and-its-significance-in-llms/">Perplexity</a> "measures the confidence model has in its (next word) predictions." It proxies how well a model "understands" a text.</h4>
     <h3>What is perplexity-based linguistic distance?</h3>
     <h4><a href="https://aclanthology.org/W18-3916.pdf">Pichel et al </a> define perplexity-based linguistic distance "by comparing the n-grams of a text in one language or period of language with the n-gram model trained for the other language. This comparison must be made in the two directions." 
         <br><br>To formalize it: PLD(L1, L2) = (PP(CHL2, LML1) + PP(CHL1, LML2))/2 </a></h4>
@@ -212,30 +205,51 @@
     </h4>
 </div>
 
-<!-- Tab 3 Content -->
 <div id="tab3" class="tab-content">
     <div class="section">
         <h3>Insights</h3>
-        <p>English outsized linguistic impact - settlement over trade?</p>
-        <p>What flags do we put with Louisiana</p>
-        <p>What's up with Haitian</p>
-        <p>What's up with Ndyuka</p>
+        <p><b>Broad takeaways</b> - A first notable insight is English's outsized impact even on regions where it had a relatively smaller colonial presence. This could be a reflection of a few things.
+            First, the popularity English has gained likely impacts the evolution of Creole languages, especially the retention of words in the post-colonial era. Given English is a 
+            way more common second language than Dutch, for example, it makes sense that its impact has more longevity.
+            <br> Second, compared to empires like the Dutch that were mostly focused on trading hubs, the English colonial strategy of settlement likely also contributes to its linguistic
+            impact. Accordingly, it's misleading to solely think of linguistic evolution in terms of colonial rule - instead, the broader context of trade networks, settlement, and global linguistic
+            evolution should be considered.
+            <br> A great example of the misleadingness of focusing only on colonial rule is Louisiana. Louisiana was a French colony, so its Creole is French-based. However, given its purchase by the 
+            United States and current status as an American state, it's unsurprising that English has made a huge mark on its language.
+        </p>
+        <p><b>Haitian</b> - In some ways, the work confirms what we suspect about Haitian Creole - eg that the impact of French would be larger than the impact of English. But 
+            in other ways, the work reveals how comparatively far Haitian Creole has developed away from both French and English - especially compared to other Creoles that remain closer. 
+            The comparative distance of Haitian Creole points to its robust development as its own language, and the strength and independence of Haitian cultural development beyond colonial influence.
+        </p>
+        <p><b>Ndyuka</b> - Ndyuka also complicates our expectations around the results. Despite being a Dutch colony, Ndyuka's Creole has incredibly strong ties to English. Interestingly enough, there is very little 
+        publicly accessible information documenting why this is the case. This work points to a gap in our current understanding of Ndyuka's evolution. Better understanding how English came to have an out-sized impact
+        on the Ndyukan language could also give us insight into the cultural interactions of the Ndyukan people in Suriname and French Guiana. And, the existing gap in information points to how understudied
+        many of these Creole languages are, despite their potential to be incredibly informative about the history of their people.</p>
     </div>
     <div class="section">
         <h3>Limitations</h3>
-        <p>Sample sizes - huge issue for the field</p>
-        <p>Even comparisons</p>
-        <p>Is PLD even real?</p>
+        <p><b>Sample limitations</b> - Despite both millions of Creole speakers and the centrality of Creole languages, language modelling work with Creole languages often suffers from <a href = "https://aclanthology.org/2021.conll-1.5.pdf">lack of data and attention</a> in the field.
+            For this project, the biggest sample size issues came when computing the proper PLD, which is why it is only computed for 3 language pairs (which each had millions of words in its corpus, <a href="https://aclanthology.org/W18-3916.pdf">comparable to other projects </a>). There's also issues surrounding data quality - for example,
+            all text is converted to unicode (stripping accents and unique characters) which obscures connections based on non-unicode characters. Future work that enlargens the corpus would be a significant improvement.
+        </p>
+        <p><b>Processing power</b> - When calculating the perplexities with gpt2, our data was also limited by processing power. In order to prevent my computer from breaking, the test sample for each language is limited to 1000 entries
+        (despite the availability of more data).</p>
+        <p><b>Legitimacy of Perplexity-Based Linguistic Distance</b> - While there have been mulitple published <a href = "https://www.tandfonline.com/doi/full/10.1080/09296174.2020.1732177?scroll=top&needAccess=true">papers</a> using perplexity-based linguistic distance, it's a relatively new concept and far from a definitively accurate way to
+        calculate linguistic distance. While it has the benefit of accounting for the concept of mutual intelligibility in a manner that more structured methods cannot, it also 
+        risks missing many important linguistic aspects: for example, over-estimating superficial similarities and under-estimating the importance of grammatical structure.</p>
     </div>
     <div class="section">
         <h3>Sources</h3>
-        <p>ty kreyol-mt</p>
-        <p>ty chat gpt</p>
+        <p>Data from: 
+            <br>Kreyol-MT: Building MT for Latin American, Caribbean and Colonial African Creole Languages,
+            <br>Robinson, Nathaniel R and Dabre, Raj and Shurtz, Ammon and Dent, Rasul and Onesi, Onenamiyi and Monroc, Claire Bizon and Grobol, Loic and Muhammad, Hasan and Garg, Ashi and Etori, Naome A and others
+            <br>https://arxiv.org/abs/2405.05376
+           </p>
+        <p>Code was assisted by Chat GPT!</p>
     </div>
 </div>
 
 <script>
-    // Function to switch between tabs
     function openTab(tabId) {
         const tabs = document.querySelectorAll('.tab-content');
         tabs.forEach(tab => tab.classList.remove('active'));
@@ -244,7 +258,6 @@
         activeTab.classList.add('active');
     }
 
-    // Function to toggle dropdown content
     const dropdownButtons = document.querySelectorAll('.dropdown-btn');
     dropdownButtons.forEach(button => {
         button.addEventListener('click', function () {
@@ -253,7 +266,6 @@
         });
     });
 
-    // Open the first tab by default
     openTab('tab1');
 </script>
 
