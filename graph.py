@@ -4,11 +4,11 @@ import pandas as pd
 data = {
     "Language": [
         "Saint Lucian", "Seychellois", "Ndyuka", "Guadeloupean", "Haitian", "Kabuverdianu",
-        "Louisiana", "Mauritian", "Papiamento", "Naija", "Sango", "Tok Pisin", "Trinidadian Creole"
+        "Louisiana", "Mauritian", "Papiamento", "Naija", "Tok Pisin", "Trinidadian Creole"
     ],
     "Difference": [
         2489, 1924, 843, 8012, 9701, 2433,
-        2089, 2116, 6274, 1962, 1875, 1243, 4352
+        2089, 2116, 6274, 1962, 1243, 4352
     ]
 }
 
@@ -22,7 +22,6 @@ colors = [
     "#e79742", 
     "#4f69c9", 
     "#30a319",  
-    "#67b74f", 
     "#4fb7ac", 
     "#a5216e", 
     "#bc5dbf"
@@ -32,8 +31,8 @@ df = pd.DataFrame(data)
 
 df = df.sort_values(by="Difference", ascending=False)
 
-plt.figure(figsize=(12, 4))  # Increase figure size for better space
-plt.barh(df["Language"], df["Difference"], color=colors, height=0.95)  # Very thin bars
+plt.figure(figsize=(12, 4))
+plt.barh(df["Language"], df["Difference"], color=colors, height=0.95)
 
 for index, value in enumerate(zip(df["Difference"], df["Language"])):
     plt.text(value[0] + 100, index, value[1], va='center', fontsize=10)

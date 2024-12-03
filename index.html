@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linguistic Difference and Creolization</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+
+        h4{
+            font-weight:normal;
+            font-size: 18px;
+        }
+
+        .header {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 30px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        /* Navbar styles */
+        .navbar {
+            display: flex;
+            background-color: #333;
+            padding: 10px;
+            justify-content: center;
+        }
+
+        .navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+            margin: 0 10px;
+            border-radius: 4px;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* Tab content styles */
+        .tab-content {
+            display: none;
+            padding: 20px;
+        }
+
+        /* Active tab content */
+        .active {
+            display: block;
+        }
+
+        /* Dropdown button style */
+        .dropdown-btn {
+            color: white;
+            padding: 10px;
+            width: 100%;
+            text-align: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+            margin: -8px 0;
+        }
+
+        .dropdown-btn:hover {
+            background-color: #45a049;
+        }
+
+        /* Dropdown content style */
+        .dropdown-container {
+            display: none;
+            padding-left: 20px;
+        }
+
+        /* Image styling */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        /* Section style */
+        .section h3 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    How does colonization impact linguistic evolution of Creole languages?
+    <h4>And how can linguistic distance reflect and complicate how we think about colonial influence?</p>
+</div>
+    
+<!-- Navbar -->
+<div class="navbar">
+    <a href="javascript:void(0)" onclick="openTab('tab1')">Creolization Across Languages</a>
+    <a href="javascript:void(0)" onclick="openTab('tab2')">Perplexity-Based Linguistic Distance</a>
+    <a href="javascript:void(0)" onclick="openTab('tab3')">Insights, Limitations, and Sources</a>
+</div>
+
+<!-- Tab 1 Content -->
+<div id="tab1" class="tab-content">
+    <h2>How "far" are Creole languages from English?</h2>
+    <h3>"Distance" is measured by perplexity using English gpt2.</h3>
+    <img src="chart.png" alt="Image">
+    <div class="section">
+        <button class="dropdown-btn" style="background-color: #bc5dbf">Ndyuka</button>
+        <div class="dropdown-container">
+            <p >Content for dropdown 1</p>
+        </div>
+    </div>
+    <div class="section">
+        <button class="dropdown-btn" style="background-color: #a5216e">Tok Pisin</button>
+        <div class="dropdown-container">
+            <p >Content for dropdown 1</p>
+        </div>
+    </div>
+    <div class="section">
+        <button class="dropdown-btn" style="background-color: #4fb7ac">Seychellois</button>
+        <div class="dropdown-container">
+            <p>Content for dropdown 2</p>
+        </div>
+    </div>
+    <div class="section">
+        <button class="dropdown-btn" style="background-color: #30a319">Naija</button>
+        <div class="dropdown-container">
+            <p >Content for dropdown 1</p>
+        </div>
+    </div>
+    <div class="section">
+        <button class="dropdown-btn" style="background-color: #4f69c9">Louisiana</button>
+        <div class="dropdown-container">
+            <p>Content for dropdown 2</p>
+        </div>
+    </div>
+    <div class="section">
+        <button class="dropdown-btn" style="background-color: #e79742">Mauritian</button>
+        <div class="dropdown-container">
+            <p>Content for dropdown 3</p>
+        </div>
+    </div>
+    <div class="section">
+        <button class="dropdown-btn" style="background-color: #5dbfa4">Kabuverdianu</button>
+        <div class="dropdown-container">
+            <p >Content for dropdown 1</p>
+        </div>
+    </div>
+    <div class="section">
+        <button class="dropdown-btn" style="background-color: #c853c6">Saint Lucian</button>
+        <div class="dropdown-container">
+            <p>Content for dropdown 2</p>
+        </div>
+    </div>
+    <div class="section">
+        <button class="dropdown-btn" style="background-color: #b62626">Trinidadian Creole</button>
+        <div class="dropdown-container">
+            <p>Content for dropdown 3</p>
+        </div>
+    </div>
+    <div class="section">
+        <button class="dropdown-btn" style="background-color: #aa79db">Papiamento</button>
+        <div class="dropdown-container">
+            <p >Content for dropdown 1</p>
+        </div>
+    </div>
+    <div class="section">
+        <button class="dropdown-btn" style="background-color: #1984a3">Guadeloupean</button>
+        <div class="dropdown-container">
+            <p>Content for dropdown 2</p>
+        </div>
+    </div>
+    <div class="section">
+        <button class="dropdown-btn" style="background-color: #5ba8e3">Haitian</button>
+        <div class="dropdown-container">
+            <p>Content for dropdown 3</p>
+        </div>
+    </div>
+</div>
+
+<!-- Tab 2 Content (Blank) -->
+<div id="tab2" class="tab-content">
+    <h2>Perplexity-Based Linguistic Distance</h2>
+    <h3>What is linguistic distance?</h3>
+    <h4>Linguistic distance is a measure of how different two languages are. There are many proposed measures of linguistic difference, such as <a href="https://docs.iza.org/dp1246.pdf">ease of second language learning</a>, or <a href="https://www.sciencedirect.com/science/article/pii/S0378437110003997?casa_token=uaeFGK7AsDgAAAAA:rm3AElO5G4Ik1zRGkCHMIXnXAscKJIs33wCo_Q1Eevn5owFD2P7XscPqGZHwyaXYyyuVhRlb8HI">comparing synonyms.</a></h4>
+    <h3>What is perplexity-based linguistic distance?</h3>
+    <h4><a href="https://aclanthology.org/W18-3916.pdf">Pichel et al </a> define perplexity-based linguistic distance "by comparing the n-grams of a text in one language or period of language with the n-gram model trained for the other language. This comparison must be made in the two directions." 
+        <br><br>To formalize it: PLD(L1, L2) = (PP(CHL2, LML1) + PP(CHL1, LML2))/2 </a></h4>
+    <h3>Some Creole Examples</h3>
+    <h4>These examples use <a href="https://github.com/JHU-CLSP/Kreyol-MT/tree/main">corpuses assembled by JHU researchers</a>, no pre-trained models.</h4>
+    <h4><b>Ndyuka:English</b>: 1401</h4>
+    <h4><b>Haitian:English</b>: 16885</h4>
+    <h4>Ndyuka is an English-based Creole - for example, <a href="https://benjamins.com/catalog/cll.23?srsltid=AfmBOorOqqgRIbceGIHkbnXkC_FzFoTMDHn7-cHx68bi7dOoMjeQGuVU">76% of its most common 200 words</a> are sourced from English. Interestingly enough, Suriname and French Guiana (the primary location of Ndyuka speakers) were not dominated by the British in the colonial period. While there were some British claims to the area, the primary colonizer was the Netherlands (speaking Dutch).
+        On the other hand, Haitian is a French-based Creole, and Haiti was a french colony for over a century. Thus, the comparatively large linguistic distance makes sense.</h4>
+    </h4>
+    <h4><b>Haitian:French</b>: 15778</h4>
+    <h4><b>Haitian:English</b>: 16885</h4>
+    <h4>Now, comparing English to French, we can see French is comparatively closer to Haitian. Notable, however, is that the difference is much smaller than expected. While part of this most definitely speaks to
+        the sample size, part of it also speaks to how evolved Haitian has become. Haitian Creole is <a href="https://apics-online.info/surveys/49">estimated</a> to be the most popular Creole language, and has grown far past mutual intelligibility with French (including its own grammar).
+    </h4>
+</div>
+
+<!-- Tab 3 Content -->
+<div id="tab3" class="tab-content">
+    <div class="section">
+        <h3>Insights</h3>
+        <p>English outsized linguistic impact - settlement over trade?</p>
+        <p>What flags do we put with Louisiana</p>
+        <p>What's up with Haitian</p>
+        <p>What's up with Ndyuka</p>
+    </div>
+    <div class="section">
+        <h3>Limitations</h3>
+        <p>Sample sizes - huge issue for the field</p>
+        <p>Even comparisons</p>
+        <p>Is PLD even real?</p>
+    </div>
+    <div class="section">
+        <h3>Sources</h3>
+        <p>ty kreyol-mt</p>
+        <p>ty chat gpt</p>
+    </div>
+</div>
+
+<script>
+    // Function to switch between tabs
+    function openTab(tabId) {
+        const tabs = document.querySelectorAll('.tab-content');
+        tabs.forEach(tab => tab.classList.remove('active'));
+
+        const activeTab = document.getElementById(tabId);
+        activeTab.classList.add('active');
+    }
+
+    // Function to toggle dropdown content
+    const dropdownButtons = document.querySelectorAll('.dropdown-btn');
+    dropdownButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const dropdown = this.nextElementSibling;
+            dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
+        });
+    });
+
+    // Open the first tab by default
+    openTab('tab1');
+</script>
+
+</body>
+</html>
