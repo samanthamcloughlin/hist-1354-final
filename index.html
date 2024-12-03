@@ -264,7 +264,9 @@
         <h3>Limitations</h3>
         <p><b>Sample limitations</b> - Despite both millions of Creole speakers and the centrality of Creole languages, language modelling work with Creole languages often suffers from <a href = "https://aclanthology.org/2021.conll-1.5.pdf">lack of data and attention</a> in the field.
             For this project, the biggest sample size issues came when computing the proper PLD, which is why it is only computed for 3 language pairs (which each had millions of words in its corpus, <a href="https://aclanthology.org/W18-3916.pdf">comparable to other projects </a>). There's also issues surrounding data quality - for example,
-            all text is converted to unicode (stripping accents and unique characters) which obscures connections based on non-unicode characters. Future work that enlargens the corpus would be a significant improvement.
+            all text is converted to unicode (stripping accents and unique characters) which obscures connections based on non-unicode characters. Future work that enlargens the corpus would be a significant improvement. Additionally, because for many languages there was not enough data to
+            reasonably calculate perplexity in both directions, perplexity is only calculated with an English model and Creole text. This results in an imprecise measure of linguistic distance, majorly limiting our ability to
+            interpret results.
         </p>
         <p><b>Processing power</b> - When calculating the perplexities with gpt2, our data was also limited by processing power. In order to prevent my computer from breaking, the test sample for each language is limited to 1000 entries
         (despite the availability of more data).</p>
